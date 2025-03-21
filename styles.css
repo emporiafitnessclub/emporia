@@ -1,196 +1,152 @@
-/* Importação de fonte moderna */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Importação de fonte Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
 
 :root {
-    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente para a página inicial */
+    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a);
     --primary-color: #d1004a;
-    --secondary-color: #e69138;
-    --accent-color: #f78d60; /* Cor de destaque */
+    --secondary-color: #ffb950;
+    --accent-color: #f78d60;
     --text-color: #ffffff;
     --dark-text: #333;
     --bg-light: #fff;
-    --bg-about: #e69138; /* Cor de fundo para a página "Sobre Nós" */
-    --bg-about-ti: #f78d60; /* Cor de fundo para a página "Sobre Ti" */
-    --bg-contact: #e69138; /* Gradiente para a página de contatos */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif; /* Usando Raleway para todos os elementos */
 }
 
 body {
     background: var(--bg-light);
-    color: var(--text-color);
+    color: var(--dark-text);
     text-align: left;
 }
 
-/* Estilo da Landing Page */
-.landing {
-    height: 100vh;
-    background: var(--primary-gradient);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase; /* Títulos em maiúsculas */
 }
 
-.landing h1 {
-    font-size: 3rem;
-    font-weight: 600;
+nav a {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
-.landing p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.landing button {
+button, .cta-button {
+    font-family: 'Raleway', sans-serif; /* Botões também com Raleway */
     padding: 12px 24px;
-    background: var(--text-color);
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: none;
     border-radius: 30px;
+    background: #d1004a;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
-.landing button:hover {
-    background: var(--accent-color);
-    color: var(--text-color);
+button:hover, .cta-button:hover {
+    background: #f78d60;
 }
 
 /* Menu de navegação */
 nav {
     display: flex;
-    justify-content: center;
-    background-color: var(--bg-light);
-    padding: 20px 0;
+    justify-content: space-around;
+    padding: 20px;
+    background: var(--primary-gradient);
 }
 
 nav a {
+    color: #d1004a;
     text-decoration: none;
-    color: var(--primary-color);
-    font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 40px; /* Aumenta a separação entre os itens do menu */
+    border: 2px solid #d1004a;
+    border-radius: 25px;
     padding: 10px 20px;
-    text-transform: uppercase;
-    background-color: var(--text-color);
-    border-radius: 15px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: var(--accent-color);
+    background: #d1004a;
+    color: #fff;
+}
+
+/* Seção de Landing */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--primary-gradient);
     color: var(--text-color);
 }
 
-/* Estilo dos Títulos das Páginas */
-h1, h2 {
-    font-size: 2.4rem;
+.landing h1 {
+    font-size: 4rem;
     font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
-/* Estilo das Páginas Individuais */
-#about {
-    background-color: var(--bg-about); /* Página "Sobre Nós" com fundo #e69138 */
-}
-
-#about-ti {
-    background-color: var(--bg-about-ti); /* Página "Sobre Ti" com fundo #f78d60 */
-}
-
-#contact {
-    background: var(--primary-gradient); /* Gradiente para a página de contatos */
-}
-
-#about, #about-ti, #contact {
-    padding: 40px;
-}
-
-/* Títulos dentro de retângulos com bordas */
-#about h1, #about-ti h1, #contact h1 {
-    background: var(--text-color);
-    color: var(--primary-color);
-    padding: 15px;
-    border-radius: 12px;
-    text-transform: uppercase;
-}
-
-/* Estilo dos Planos */
-.plan {
-    padding: 30px;
-    border: 2px solid var(--secondary-color); /* Borda (outline) em cor oposta ao fundo */
-    border-radius: 15px;
-    margin: 20px 0;
-    color: var(--text-color);
-    background: transparent; /* Sem fundo */
-    font-size: 1.1rem; /* Texto do plano menor que o título */
-}
-
-.plan h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text-color);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.plan ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.plan ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-}
-
-/* Estilo dos Botões de Ação */
-.cta-button {
-    display: inline-block;
-    background: var(--text-color);
-    color: var(--primary-color);
+.landing button {
+    background-color: #fff;
+    color: #d1004a;
     padding: 12px 24px;
     border-radius: 30px;
     font-size: 1.2rem;
     font-weight: 600;
-    text-decoration: none;
-    margin: 20px 10px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.cta-button:hover {
-    background: var(--accent-color);
-    color: var(--text-color);
+.landing button:hover {
+    background-color: #d1004a;
+    color: #fff;
 }
 
-/* Responsividade */
+/* Estilo dos títulos das páginas */
+section h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Planos */
+.plan {
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.plan h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Footer e outras seções */
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: #d1004a;
+}
+
 @media (max-width: 768px) {
+    /* Ajustes para telas menores */
     .landing h1 {
         font-size: 2.5rem;
     }
-
-    .plan h2 {
-        font-size: 1.8rem;
-    }
-
-    h1, h2 {
-        font-size: 1.8rem;
-    }
-
-    .plan {
-        font-size: 1rem;
+    section h1 {
+        font-size: 2rem;
     }
 }
