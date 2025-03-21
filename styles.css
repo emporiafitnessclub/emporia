@@ -11,7 +11,15 @@
     --bg-light: #fff; /* Cor de fundo branca */
 }
 
-/* Definições gerais de estilo para todas as páginas */
+/* Garantir que o conteúdo ocupe toda a tela */
+html, body {
+    height: 100%; /* Faz o HTML e o BODY ocuparem toda a altura da tela */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundações globais */
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +30,8 @@ body {
     font-family: 'Raleway', sans-serif;
     color: white;
     line-height: 1.6;
-    height: 100vh; /* Faz o body ocupar toda a altura da tela */
-    overflow-x: hidden; /* Impede o overflow horizontal */
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, p {
