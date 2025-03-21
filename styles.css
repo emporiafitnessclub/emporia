@@ -1,18 +1,18 @@
-/* Importação de fonte moderna */
+/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Variáveis de cor */
+/* Variáveis de cores */
 :root {
-    --primary-gradient: linear-gradient(90deg, #ffc106, #d1004a); /* Gradiente Principal */
-    --primary-color: #d1004a; /* Cor primária */
-    --secondary-color: #ffb950; /* Cor secundária */
-    --accent-color: #f78d60; /* Cor de destaque */
-    --text-color: #ffffff; /* Cor de texto */
-    --dark-text: #333; /* Cor de texto escuro */
-    --bg-light: #fff; /* Cor de fundo clara */
+    --primary-gradient: linear-gradient(to bottom, #d1004a, #ffc106); /* Gradiente de cima para baixo */
+    --primary-color: #d1004a;
+    --secondary-color: #ffb950;
+    --accent-color: #f78d60;
+    --text-light: #ffffff;
+    --text-dark: #333;
+    --bg-light: #fff;
 }
 
-/* Reset e fonte padrão */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
@@ -20,105 +20,86 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Corpo e fundo */
-body {
-    background: var(--bg-light);
-    color: var(--dark-text);
-    text-align: center;
-}
-
-/* Primeira Página (Landing Page) */
+/* Landing Page */
 .landing {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     background: var(--primary-gradient);
-    color: var(--text-color);
+    color: var(--text-light);
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #ffffff;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* Estilos diferentes para cada página */
+
+/* Sobre Nós */
+.sobre-nos {
+    background: #ffb950;
+    color: #333;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.title {
-    font-size: 5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+/* Sobre Ti */
+.sobre-ti {
+    background: #d1004a;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.subtext {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+/* Vamos Conversar */
+.vamos-conversar {
+    background: #f78d60;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.landing button {
-    padding: 12px 24px;
-    background: var(--text-color);
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.landing button:hover {
-    background: var(--accent-color);
-    color: var(--text-color);
-}
-
-/* Página Inicial com seções ocultas inicialmente */
-#home {
-    display: none; /* Estava faltando isso */
-}
-
-/* Navegação */
-nav {
-    margin-top: 20px;
-}
-
-nav a {
-    margin: 10px;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--accent-color);
-}
-
-/* Estilo das seções */
-section {
-    padding: 40px 20px;
-}
-
-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-section p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-section a {
+/* Botões das páginas */
+.button {
     display: inline-block;
-    background: var(--primary-color);
-    color: var(--text-color);
+    margin-top: 20px;
     padding: 12px 24px;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
     transition: 0.3s;
 }
 
-section a:hover {
+.button:hover {
     background: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-light);
 }
-
-/* Cores de fundo difer
