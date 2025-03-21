@@ -77,10 +77,9 @@ html, body {
 .sobre-nos-page,
 .sobre-ti-page,
 .vamos-conversar-page {
-    background-color: #ffb950; /* Cor de fundo amarela */
     color: white;
     padding: 40px;
-    text-align: left;
+    text-align: center;
     height: 100vh; /* Garante que ocupe toda a altura da página */
     display: flex;
     flex-direction: column;
@@ -88,18 +87,27 @@ html, body {
     align-items: center;
 }
 
-/* Página "Sobre Ti" */
+/* Página "Sobre Ti" (Laranja Claro) */
 .sobre-ti-page {
     background-color: #f78d60; /* Cor de fundo laranja claro */
 }
 
-/* Página "Vamos Conversar" */
+/* Página "Sobre Nós" (Amarelo) */
+.sobre-nos-page {
+    background-color: #ffb950; /* Cor de fundo amarela */
+}
+
+/* Página "Vamos Conversar" (Gradiente de Rosa e Laranja) */
 .vamos-conversar-page {
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente de fundo */
     color: white;
     padding: 40px;
     text-align: left;
-    height: 100vh; /* Garante que ocupe toda a altura da página */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Botões */
@@ -141,16 +149,4 @@ h3 {
 /* Ajuste de espaçamento dos botões */
 .button-container {
     margin-top: 30px;
-}
-
-/* Para garantir que os botões na página de entrada sejam consistentemente brancos com letras rosa */
-.landing button {
-    background-color: white;
-    color: #d1004a;
-    border: 2px solid #d1004a;
-}
-
-.landing button:hover {
-    background-color: #d1004a;
-    color: white;
 }
