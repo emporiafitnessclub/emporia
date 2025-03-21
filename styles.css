@@ -11,142 +11,218 @@
     --bg-light: #fff;
 }
 
+
+/* Definições gerais de estilo para todas as páginas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif; /* Usando Raleway para todos os elementos */
 }
 
 body {
-    background: var(--bg-light);
-    color: var(--dark-text);
-    text-align: left;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; /* Títulos em maiúsculas */
-}
-
-nav a {
     font-family: 'Raleway', sans-serif;
-    padding: 10px;
-    text-transform: uppercase;
+    color: white;
+    line-height: 1.6;
 }
 
-button, .cta-button {
-    font-family: 'Raleway', sans-serif; /* Botões também com Raleway */
-    padding: 12px 24px;
-    border-radius: 30px;
-    background: #d1004a;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
+h1, h2, h3, p {
+    margin-bottom: 1rem;
 }
 
-button:hover, .cta-button:hover {
-    background: #f78d60;
-}
-
-/* Menu de navegação */
-nav {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background: var(--primary-gradient);
-}
-
+/* Links no topo do menu */
 nav a {
-    color: #d1004a;
     text-decoration: none;
-    font-weight: 600;
-    border: 2px solid #d1004a;
-    border-radius: 25px;
+    color: #d1004a;
+    text-transform: uppercase;
+    font-weight: bold;
     padding: 10px 20px;
-    transition: 0.3s;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 20px;
 }
 
 nav a:hover {
-    background: #d1004a;
-    color: #fff;
+    background-color: #d1004a;
+    color: white;
 }
 
-/* Seção de Landing */
-.landing {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Menu fixo no topo */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 20px 0;
     text-align: center;
+    z-index: 10;
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Estilo da Landing Page */
+.landing {
+    text-align: center;
+    padding: 100px 20px;
     background: var(--primary-gradient);
-    color: var(--text-color);
 }
 
 .landing h1 {
     font-size: 4rem;
-    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.landing p {
+    font-size: 1.5rem;
+    color: white;
 }
 
 .landing button {
-    background-color: #fff;
-    color: #d1004a;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
+    padding: 10px 30px;
+    background-color: #d1004a;
+    color: white;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .landing button:hover {
-    background-color: #d1004a;
-    color: #fff;
+    background-color: #e69138;
 }
 
-/* Estilo dos títulos das páginas */
-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Planos */
-.plan {
-    border: 2px solid var(--secondary-color);
+/* Estilos específicos para a página "Sobre Nós" */
+.sobre-nos-page {
+    background-color: var(--secondary-color); /* Cor de fundo */
+    color: white; /* Texto em branco */
+    padding: 40px;
     border-radius: 15px;
+    text-align: left;
+}
+
+.sobre-nos-page h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.sobre-nos-page p {
+    font-size: 1rem;
+}
+
+/* Estilos específicos para a página "Sobre Ti" */
+.sobre-ti-page {
+    background-color: var(--accent-color); /* Cor de fundo */
+    color: white; /* Texto em branco */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.sobre-ti-page h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.sobre-ti-page p {
+    font-size: 1rem;
+}
+
+/* Estilos específicos para a página "Contactos" */
+.contactos-page {
+    background: var(--primary-gradient); /* Gradiente igual à página inicial */
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.contactos-page h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contactos-page p {
+    font-size: 1rem;
+}
+
+/* Estilo para os planos */
+.plan {
+    background: none;
+    border: 2px solid #d1004a;
     padding: 20px;
+    border-radius: 15px;
     margin: 20px 0;
+    text-align: left;
 }
 
 .plan h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
-/* Footer e outras seções */
-footer {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.plan ul {
+    list-style-type: none;
 }
 
-footer a {
-    color: #fff;
+.plan li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Adicionando uma margem entre o título de navegação superior e o conteúdo */
+nav a {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+/* Modificando o comportamento dos links no topo */
+nav a.active {
+    background-color: #e69138;
+    color: white;
+}
+
+/* Para os planos, a borda estará visível em torno de cada plano, ajustando-se ao fundo da página */
+.plan {
+    border: 2px solid #d1004a;
+}
+
+/* Tipografia do menu superior e títulos */
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Ajuste no botão de chamada */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #d1004a;
+    color: white;
+    border-radius: 25px;
     text-decoration: none;
-    padding: 10px;
+    display: inline-block;
 }
 
-footer a:hover {
-    color: #d1004a;
-}
-
-@media (max-width: 768px) {
-    /* Ajustes para telas menores */
-    .landing h1 {
-        font-size: 2.5rem;
-    }
-    section h1 {
-        font-size: 2rem;
-    }
+.cta-button:hover {
+    background-color: #e69138;
 }
