@@ -65,37 +65,53 @@ footer {
     background-color: #222;
 }
 
-/* Estilo da Landing Page */
+html, body {
+    height: 100%; /* Faz o HTML e o BODY ocuparem toda a altura da tela */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir que o conteúdo dentro da landing page ocupe toda a altura da tela */
 .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Faz o conteúdo ocupar 100% da altura da tela */
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente de fundo */
+    color: white;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente para a página de entrada */
-    min-height: 100vh; /* Preenche toda a altura da página */
 }
 
 .landing h1 {
     font-size: 4rem;
     text-transform: uppercase;
-    color: white;
 }
 
 .landing p {
     font-size: 1.5rem;
-    color: white;
 }
 
-.landing button {
+.button-container {
+    margin-top: 30px;
+}
+
+.cta-button {
     padding: 10px 30px;
-    background-color: #d1004a;
-    color: white;
-    border: none;
+    background-color: white;
+    color: #d1004a;
+    border: 2px solid #d1004a;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
+    margin: 10px;
+    text-decoration: none;
 }
 
-.landing button:hover {
-    background-color: #e69138;
+.cta-button:hover {
+    background-color: #d1004a;
+    color: white;
 }
 
 /* Estilos específicos para a página "Sobre Nós" */
