@@ -1,18 +1,19 @@
-/* Definir cores principais */
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 :root {
-    --primary-gradient: linear-gradient(to bottom, #ffc106, #d1004a);
+    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente para a página inicial */
     --primary-color: #d1004a;
-    --secondary-color: #ffb950;
-    --accent-color: #f78d60;
+    --secondary-color: #e69138;
+    --accent-color: #f78d60; /* Cor de destaque */
     --text-color: #ffffff;
     --dark-text: #333;
     --bg-light: #fff;
-    --bg-sobre-ti: #f78d60; /* Cor de fundo para a página "Sobre Ti" */
-    --bg-sobre-nos: #e69138; /* Cor de fundo para a página "Sobre Nós" */
-    --bg-contatos: #ffc106; /* Gradiente para a página "Vamos Conversar" */
+    --bg-about: #e69138; /* Cor de fundo para a página "Sobre Nós" */
+    --bg-about-ti: #f78d60; /* Cor de fundo para a página "Sobre Ti" */
+    --bg-contact: #e69138; /* Gradiente para a página de contatos */
 }
 
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -20,30 +21,29 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Estilo global */
 body {
-    background-color: var(--bg-light);
-    color: var(--dark-text);
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: left; /* Alinhamento dos textos à esquerda */
-}
-
-h1, h2, h3 {
-    text-transform: uppercase;
+    background: var(--bg-light);
+    color: var(--text-color);
+    text-align: left;
 }
 
 /* Estilo da Landing Page */
 .landing {
-    text-align: center;
+    height: 100vh;
     background: var(--primary-gradient);
     color: var(--text-color);
-    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .landing h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .landing p {
@@ -52,10 +52,11 @@ h1, h2, h3 {
 }
 
 .landing button {
-    background-color: var(--text-color);
-    color: var(--primary-color);
-    font-size: 1.1rem;
     padding: 12px 24px;
+    background: var(--text-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -63,100 +64,115 @@ h1, h2, h3 {
 }
 
 .landing button:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-light);
+    padding: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 40px; /* Aumenta a separação entre os itens do menu */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: var(--text-color);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
     background-color: var(--accent-color);
     color: var(--text-color);
 }
 
-/* Estilo das Páginas */
-section {
-    padding: 40px;
+/* Estilo dos Títulos das Páginas */
+h1, h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-section h1 {
-    text-align: center;
-    background-color: #ffffff;
-    color: #d1004a;
-    padding: 20px;
-    border-radius: 15px;
-    width: fit-content;
-    margin: 0 auto 40px;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Páginas específicas - cores de fundo */
+/* Estilo das Páginas Individuais */
 #about {
-    background-color: var(--bg-sobre-nos);
-    color: var(--text-color);
+    background-color: var(--bg-about); /* Página "Sobre Nós" com fundo #e69138 */
 }
 
-#plans {
-    background-color: var(--bg-sobre-ti);
-    color: var(--text-color);
+#about-ti {
+    background-color: var(--bg-about-ti); /* Página "Sobre Ti" com fundo #f78d60 */
 }
 
 #contact {
-    background: var(--bg-contatos);
-    color: var(--text-color);
+    background: var(--primary-gradient); /* Gradiente para a página de contatos */
 }
 
-/* Títulos das páginas */
-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: white;
-    color: #d1004a;
+#about, #about-ti, #contact {
+    padding: 40px;
+}
+
+/* Títulos dentro de retângulos com bordas */
+#about h1, #about-ti h1, #contact h1 {
+    background: var(--text-color);
+    color: var(--primary-color);
+    padding: 15px;
     border-radius: 12px;
-    text-align: center;
     text-transform: uppercase;
-    width: 100%;
 }
 
-/* Estilo dos planos */
+/* Estilo dos Planos */
 .plan {
-    background: none;
-    border: 2px solid var(--primary-color);
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 30px;
+    border: 2px solid var(--secondary-color); /* Borda (outline) em cor oposta ao fundo */
     border-radius: 15px;
-    box-sizing: border-box;
-    color: var(--dark-text);
+    margin: 20px 0;
+    color: var(--text-color);
+    background: transparent; /* Sem fundo */
+    font-size: 1.1rem; /* Texto do plano menor que o título */
 }
 
 .plan h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
 .plan ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .plan ul li {
-    margin: 10px 0;
     font-size: 1.1rem;
+    margin: 10px 0;
 }
 
-/* Botões para "Vamos Conversar" */
+/* Estilo dos Botões de Ação */
 .cta-button {
-    background-color: var(--text-color);
+    display: inline-block;
+    background: var(--text-color);
     color: var(--primary-color);
-    padding: 15px 30px;
+    padding: 12px 24px;
     border-radius: 30px;
     font-size: 1.2rem;
-    display: inline-block;
-    margin: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px 10px;
     transition: 0.3s;
 }
 
 .cta-button:hover {
-    background-color: var(--accent-color);
+    background: var(--accent-color);
     color: var(--text-color);
 }
 
@@ -166,24 +182,15 @@ section h1 {
         font-size: 2.5rem;
     }
 
-    .landing p {
-        font-size: 1rem;
-    }
-
-    section h1 {
+    .plan h2 {
         font-size: 1.8rem;
     }
 
-    .plan h2 {
-        font-size: 1.6rem;
+    h1, h2 {
+        font-size: 1.8rem;
     }
 
-    .plan ul li {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        padding: 12px 20px;
+    .plan {
         font-size: 1rem;
     }
 }
