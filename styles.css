@@ -1,106 +1,96 @@
-/* Importação de fonte Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Definição de variáveis de cor */
 :root {
-    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente principal */
-    --primary-color: #d1004a;  /* Rosa choque */
-    --secondary-color: #ffb950;  /* Amarelo */
-    --accent-color: #f78d60;  /* Laranja claro */
-    --text-color: #ffffff;  /* Texto branco */
+    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente com a nova cor */
+    --primary-color: #d1004a; /* Cor principal */
+    --secondary-color: #e69138; /* Cor secundária substituída pelo tom desejado */
+    --accent-color: #f78d60; /* Cor de destaque */
+    --text-color: #ffffff; /* Cor do texto (branco) */
     --dark-text: #333;
-    --bg-light: #fff; /* Cor de fundo branca */
+    --bg-light: #fff; /* Cor de fundo leve */
 }
 
-/* Definições gerais de estilo para todas as páginas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    line-height: 1.6;
+    background: var(--bg-light);
+    color: var(--text-color);
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Landing Page */
+.landing {
     height: 100vh;
-    overflow-x: hidden;
-}
-
-h1, h2, h3, p {
-    margin-bottom: 1rem;
-}
-
-/* Links no topo do menu */
-nav a {
-    text-decoration: none;
-    color: #d1004a;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 15px;
-    margin: 0 20px;
-}
-
-nav a:hover {
-    background-color: #d1004a;
-    color: white;
-}
-
-/* Menu fixo no topo */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 10;
-}
-
-/* Estilo do rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-}
-
-/* Garantir que o conteúdo ocupe toda a tela */
-html, body {
-    height: 100%; /* Faz o HTML e o BODY ocuparem toda a altura da tela */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo para as páginas "Sobre Ti", "Vamos Conversar" e "Sobre Nós" */
-.sobre-nos-page,
-.sobre-ti-page,
-.vamos-conversar-page {
-    color: white;
-    padding: 40px;
-    text-align: center;
-    height: 100vh; /* Garante que ocupe toda a altura da página */
+    background: var(--primary-gradient);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-/* Página "Sobre Ti" (Laranja Claro) */
+.landing h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.landing button {
+    padding: 12px 24px;
+    background: var(--text-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.landing button:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Estilo dos títulos das páginas */
+h1, h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Páginas individuais */
+.sobre-ti-page, .sobre-nos-page, .vamos-conversar-page {
+    padding: 40px;
+    background-color: var(--bg-light);
+}
+
+/* Estilo das páginas individuais */
 .sobre-ti-page {
     background-color: #f78d60; /* Cor de fundo laranja claro */
 }
 
-/* Página "Sobre Nós" (Amarelo) */
 .sobre-nos-page {
     background-color: #ffb950; /* Cor de fundo amarela */
 }
 
-/* Página "Vamos Conversar" (Gradiente de Rosa e Laranja) */
 .vamos-conversar-page {
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente de fundo */
-    color: white;
+    color: var(--text-color);
     padding: 40px;
     text-align: left;
     min-height: 100vh;
@@ -110,43 +100,82 @@ html, body {
     align-items: center;
 }
 
-/* Botões */
-button, .cta-button, .whatsapp-button, .calendly-button {
-    padding: 10px 20px;
-    background-color: white;
-    color: #d1004a;
-    border: 2px solid #d1004a;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
+/* Links e Botões */
+a {
+    color: var(--primary-color);
     text-decoration: none;
-    margin: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-button:hover, .cta-button:hover, .whatsapp-button:hover, .calendly-button:hover {
-    background-color: #d1004a;
-    color: white;
+a:hover {
+    color: var(--accent-color);
 }
 
-/* Estilo de título e texto */
-h1, h2, h3, p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
+/* Estilo dos planos */
+.plan {
+    padding: 30px;
+    border: 2px solid var(--secondary-color); /* Borda (outline) em cor oposta ao fundo */
+    border-radius: 15px;
+    margin: 20px 0;
+    color: var(--text-color);
+    background: transparent; /* Sem fundo */
+    font-size: 1.1rem; /* Texto do plano menor que o título */
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
+.plan h2 {
     font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-h3 {
-    font-size: 1.5rem;
+.plan ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Ajuste de espaçamento dos botões */
-.button-container {
-    margin-top: 30px;
+.plan ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Estilo dos botões de ação */
+.cta-button {
+    display: inline-block;
+    background: var(--text-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px 10px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 2.5rem;
+    }
+
+    .plan h2 {
+        font-size: 1.8rem;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    .plan {
+        font-size: 1rem; /* Texto menor em dispositivos móveis */
+    }
 }
