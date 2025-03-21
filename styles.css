@@ -11,7 +11,6 @@
     --bg-light: #fff; /* Cor de fundo branca */
 }
 
-
 /* Definições gerais de estilo para todas as páginas */
 * {
     margin: 0;
@@ -125,14 +124,14 @@ html, body {
 
 /* Estilos específicos para a página "Sobre Ti" */
 .sobre-ti-page {
-    background-color: #f78d60; /* Cor de fundo */
+    background-color: #f78d60; /* Cor de fundo laranja claro */
     color: white; /* Texto em branco */
     padding: 40px;
     text-align: left;
     min-height: 100vh; /* Preenche toda a altura da página */
 }
 
-/* Estilos específicos para a página "Contactos" */
+/* Estilos específicos para a página "Vamos Conversar" */
 .vamos-conversar-page {
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
