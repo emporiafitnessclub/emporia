@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
 
 :root {
-    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a);
-    --primary-color: #d1004a;
-    --secondary-color: #ffb950;
-    --accent-color: #f78d60;
-    --text-color: #ffffff;
+    --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente principal */
+    --primary-color: #d1004a;  /* Rosa choque */
+    --secondary-color: #ffb950;  /* Amarelo */
+    --accent-color: #f78d60;  /* Laranja claro */
+    --text-color: #ffffff;  /* Texto branco */
     --dark-text: #333;
-    --bg-light: #fff;
+    --bg-light: #fff; /* Cor de fundo branca */
 }
+
 
 /* Definições gerais de estilo para todas as páginas */
 * {
@@ -18,20 +19,14 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; /* Faz com que o conteúdo ocupe 100% da altura da janela */
-}
-
 body {
     font-family: 'Raleway', sans-serif;
     color: white;
     line-height: 1.6;
-    background-color: #fff; /* Cor de fundo padrão */
 }
 
 h1, h2, h3, p {
     margin-bottom: 1rem;
-    color: white;
 }
 
 /* Links no topo do menu */
@@ -61,12 +56,18 @@ nav {
     z-index: 10;
 }
 
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+}
+
 /* Estilo da Landing Page */
 .landing {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to bottom, #e69138, #d1004a);
-    min-height: 100vh; /* Garante que o fundo da landing page preenche toda a tela */
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente para a página de entrada */
 }
 
 .landing h1 {
@@ -82,8 +83,8 @@ nav {
 
 .landing button {
     padding: 10px 30px;
-    background-color: white;
-    color: #d1004a;
+    background-color: #d1004a;
+    color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -91,8 +92,7 @@ nav {
 }
 
 .landing button:hover {
-    background-color: #d1004a;
-    color: white;
+    background-color: #e69138;
 }
 
 /* Estilos específicos para a página "Sobre Nós" */
@@ -102,7 +102,7 @@ nav {
     padding: 40px;
     border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
+    min-height: 100vh; /* Preenche a tela inteira */
 }
 
 .sobre-nos-page h1 {
@@ -116,12 +116,12 @@ nav {
 
 /* Estilos específicos para a página "Sobre Ti" */
 .sobre-ti-page {
-    background-color: #f78d60; /* Cor de fundo laranja claro */
+    background-color: #f78d60; /* Cor de fundo */
     color: white; /* Texto em branco */
     padding: 40px;
     border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
+    min-height: 100vh; /* Preenche a tela inteira */
 }
 
 .sobre-ti-page h1 {
@@ -134,21 +134,21 @@ nav {
 }
 
 /* Estilos específicos para a página "Contactos" */
-.vamos-conversar-page {
+.contactos-page {
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
     padding: 40px;
     border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
+    min-height: 100vh; /* Preenche a tela inteira */
 }
 
-.vamos-conversar-page h1 {
+.contactos-page h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
 
-.vamos-conversar-page p {
+.contactos-page p {
     font-size: 1rem;
 }
 
@@ -176,10 +176,43 @@ nav {
     margin: 5px 0;
 }
 
+/* Adicionando uma margem entre o título de navegação superior e o conteúdo */
+nav a {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
 /* Modificando o comportamento dos links no topo */
 nav a.active {
     background-color: #e69138;
     color: white;
+}
+
+/* Para os planos, a borda estará visível em torno de cada plano, ajustando-se ao fundo da página */
+.plan {
+    border: 2px solid #d1004a;
+}
+
+/* Tipografia do menu superior e títulos */
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 /* Ajuste no botão de chamada */
@@ -196,28 +229,14 @@ nav a.active {
     background-color: #e69138;
 }
 
-/* Garantir que o menu superior ocupe toda a largura e os links fiquem separados */
-nav a {
-    margin-right: 40px;
-    margin-left: 40px;
+/* Ajustes nos botões no index */
+.landing button {
+    background-color: white;
+    color: #d1004a;
+    border: 2px solid #d1004a;
 }
 
-/* Fundo da página "Vamos Conversar" */
-.vamos-conversar-page {
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
+.landing button:hover {
+    background-color: #d1004a;
     color: white;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: left;
-    min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
 }
-
-.vamos-conversar-page h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
-
-.vamos-conversar-page p {
-    font-size: 1rem;
-}
- 
