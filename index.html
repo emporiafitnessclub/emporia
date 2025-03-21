@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emporia</title>
-    <link rel="stylesheet" href="main/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Primeira Página (Landing Page) -->
     <div class="landing">
-        <img src="logo.png" alt="Emporia Logo" class="logo">
-        <button onclick="navigateTo('home')">Seguimos Juntas</button>
+        <h1 class="title">EMPORIA</h1>
+        <p class="subtext">Para mulheres que querem mais</p>
+        <button onclick="navigateTo('home')">Começa hoje a tua jornada connosco</button>
     </div>
 
+    <!-- Página Inicial com Subpáginas -->
     <div id="home" class="hidden">
         <nav>
             <a href="#about">Sobre Nós</a>
             <a href="#plans">Planos</a>
-            <a href="#contact">Contato</a>
+            <a href="#contact">Fale Conosco</a>
+            <a href="#schedule">Agendar Chamada</a>
         </nav>
 
         <section id="about">
@@ -34,6 +38,12 @@
             <h1>Contato</h1>
             <p>Tem dúvidas? Fale conosco diretamente no WhatsApp!</p>
             <a href="https://wa.me/seunumerodewhatsapp" target="_blank">Falar no WhatsApp</a>
+        </section>
+
+        <section id="schedule">
+            <h1>Agendar Chamada</h1>
+            <p>Agende uma chamada para conhecer o nosso trabalho e tirar suas dúvidas!</p>
+            <a href="https://calendly.com/agenda-emporia" target="_blank">Agendar Chamada</a>
         </section>
     </div>
 
