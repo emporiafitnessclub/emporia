@@ -1,16 +1,19 @@
 /* Importação de fonte moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Variáveis de cor */
 :root {
-    --primary-gradient: linear-gradient(90deg, #ffc106, #d1004a);
-    --primary-color: #d1004a;
-    --secondary-color: #ffb950;
-    --accent-color: #f78d60;
-    --text-color: #ffffff;
-    --dark-text: #333;
-    --bg-light: #fff;
+    --primary-gradient: linear-gradient(90deg, #ffc106, #d1004a); /* Gradiente Principal */
+    --primary-color: #d1004a; /* Cor primária */
+    --secondary-color: #ffb950; /* Cor secundária */
+    --accent-color: #f78d60; /* Cor de destaque */
+    --text-color: #ffffff; /* Cor de texto */
+    --dark-text: #333; /* Cor de texto escuro */
+    --bg-light: #fff; /* Cor de fundo clara */
+    --bg-dark: #f5f5f5; /* Cor de fundo escura */
 }
 
+/* Reset e fonte padrão */
 * {
     margin: 0;
     padding: 0;
@@ -18,30 +21,37 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Corpo e fundo */
 body {
     background: var(--bg-light);
     color: var(--dark-text);
     text-align: center;
 }
 
-.hero {
+/* Primeira Página (Landing Page) */
+.landing {
     height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background: var(--primary-gradient);
     color: var(--text-color);
-    flex-direction: column;
     text-align: center;
 }
- 
-.hero h1 {
-    font-size: 2.8rem;
+
+.title {
+    font-size: 5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
-.hero button {
+.subtext {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.landing button {
     padding: 12px 24px;
     background: var(--text-color);
     color: var(--primary-color);
@@ -53,62 +63,97 @@ body {
     transition: 0.3s;
 }
 
-.hero button:hover {
+.landing button:hover {
     background: var(--accent-color);
     color: var(--text-color);
 }
 
-.section {
-    padding: 60px 20px;
+/* Página Inicial com seções ocultas inicialmente */
+#home {
+    display: none;
 }
 
-.section h2 {
-    font-size: 2rem;
+/* Navegação */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Estilo das seções */
+section {
+    padding: 40px 20px;
+}
+
+section h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.card {
-    background: var(--secondary-color);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-    color: var(--dark-text);
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-.cta {
-    background: var(--primary-gradient);
-    padding: 40px 20px;
-    text-align: center;
-    color: var(--text-color);
-}
-
-.cta a {
+section a {
     display: inline-block;
-    background: var(--text-color);
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--text-color);
     padding: 12px 24px;
     border-radius: 30px;
-    font-size: 1.2rem;
     text-decoration: none;
+    font-size: 1rem;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.cta a:hover {
+section a:hover {
     background: var(--accent-color);
     color: var(--text-color);
 }
 
+/* Cores de fundo diferentes para cada página */
+#about {
+    background-color: #ffb950;
+}
+
+#plans {
+    background-color: #f78d60;
+}
+
+#contact {
+    background-color: #d1004a;
+}
+
+#schedule {
+    background-color: #ffc106;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero h1 {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    section h1 {
         font-size: 2rem;
     }
 
-    .section h2 {
-        font-size: 1.8rem;
+    section p {
+        font-size: 1rem;
     }
 }
