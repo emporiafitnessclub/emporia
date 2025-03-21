@@ -6,53 +6,11 @@
     <title>Emporia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Primeira Página (Landing Page) -->
-    <div class="landing">
-        <h1 class="title">EMPORIA</h1>
-        <p class="subtext">Para mulheres que querem mais</p>
-        <button onclick="navigateToHome()">Começa hoje a tua jornada connosco</button>
+<body class="landing">
+    <div class="landing-content">
+        <h1>EMPORIA</h1>
+        <p>Para mulheres que querem mais</p>
+        <a href="sobre-nos.html" class="cta-button">Começa hoje a tua jornada connosco</a>
     </div>
-
-    <!-- Página Inicial com Subpáginas -->
-    <div id="home" class="hidden">
-        <nav>
-            <a href="#about">Sobre Nós</a>
-            <a href="#plans">Planos</a>
-            <a href="#contact">Fale Conosco</a>
-            <a href="#schedule">Agendar Chamada</a>
-        </nav>
-
-        <section id="about">
-            <h1>Sobre Nós</h1>
-            <p>Bem-vinda à Emporia, a sua nova comunidade de mulheres...</p>
-        </section>
-
-        <section id="plans">
-            <h1>Planos</h1>
-            <p>Escolha o plano de online coaching ideal para si!</p>
-            <a href="https://calendly.com/agenda-emporia" target="_blank">Agendar Chamada</a>
-        </section>
-
-        <section id="contact">
-            <h1>Contato</h1>
-            <p>Tem dúvidas? Fale conosco diretamente no WhatsApp!</p>
-            <a href="https://wa.me/seunumerodewhatsapp" target="_blank">Falar no WhatsApp</a>
-        </section>
-
-        <section id="schedule">
-            <h1>Agendar Chamada</h1>
-            <p>Agende uma chamada para conhecer o nosso trabalho e tirar suas dúvidas!</p>
-            <a href="https://calendly.com/agenda-emporia" target="_blank">Agendar Chamada</a>
-        </section>
-    </div>
-
-    <script>
-        function navigateToHome() {
-            // Oculta a landing page e exibe a página inicial
-            document.querySelector('.landing').style.display = 'none'; 
-            document.getElementById('home').style.display = 'block'; 
-        }
-    </script>
 </body>
 </html>
