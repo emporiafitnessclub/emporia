@@ -121,18 +121,4 @@ section a:hover {
     color: var(--text-color);
 }
 
-/* Cores de fundo diferentes para cada página */
-#about {
-    background-color: #ffb950;
-}
-
-#plans {
-    background-color: #f78d60;
-}
-
-#contact {
-    background-color: #d1004a;
-}
-
-#schedule {
-    ba
+/* Cores de fundo difer
