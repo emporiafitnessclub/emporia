@@ -11,7 +11,7 @@
     <div class="landing">
         <h1 class="title">EMPORIA</h1>
         <p class="subtext">Para mulheres que querem mais</p>
-        <button onclick="navigateTo('home')">Começa hoje a tua jornada connosco</button>
+        <button onclick="navigateToHome()">Começa hoje a tua jornada connosco</button>
     </div>
 
     <!-- Página Inicial com Subpáginas -->
@@ -48,10 +48,9 @@
     </div>
 
     <script>
-        function navigateTo(section) {
-            // Esconde a landing page e mostra o conteúdo
-            document.querySelector('.landing').style.display = 'none';
-            document.getElementById(section).classList.remove('hidden');
+        function navigateToHome() {
+            document.querySelector('.landing').style.display = 'none'; // Oculta a landing page
+            document.getElementById('home').style.display = 'block'; // Exibe a página principal
         }
     </script>
 </body>
