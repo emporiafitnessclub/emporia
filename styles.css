@@ -3,7 +3,7 @@
 
 /* Variáveis de cores */
 :root {
-    --primary-gradient: linear-gradient(to bottom, #d1004a, #ffc106); /* Gradiente de cima para baixo */
+    --primary-gradient: linear-gradient(to bottom, #ffc106, #d1004a); /* Gradiente de cima para baixo */
     --primary-color: #d1004a;
     --secondary-color: #ffb950;
     --accent-color: #f78d60;
