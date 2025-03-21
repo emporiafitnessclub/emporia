@@ -134,7 +134,7 @@ footer {
 }
 
 /* Estilos específicos para a página "Contactos" */
-.contactos-page {
+.vamos-conversar-page {
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
     padding: 40px;
@@ -143,12 +143,12 @@ footer {
     min-height: 100vh; /* Preenche a tela inteira */
 }
 
-.contactos-page h1 {
+.vamos-conversar-page h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
 
-.contactos-page p {
+.vamos.conversar-page p {
     font-size: 1rem;
 }
 
@@ -226,7 +226,7 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #e69138;
+    background-color: #d1004a;
 }
 
 /* Ajustes nos botões no index */
