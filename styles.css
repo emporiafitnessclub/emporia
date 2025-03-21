@@ -10,7 +10,6 @@
     --text-color: #ffffff; /* Cor de texto */
     --dark-text: #333; /* Cor de texto escuro */
     --bg-light: #fff; /* Cor de fundo clara */
-    --bg-dark: #f5f5f5; /* Cor de fundo escura */
 }
 
 /* Reset e fonte padrão */
@@ -70,7 +69,7 @@ body {
 
 /* Página Inicial com seções ocultas inicialmente */
 #home {
-    display: none;
+    display: none; /* Estava faltando isso */
 }
 
 /* Navegação */
@@ -136,24 +135,4 @@ section a:hover {
 }
 
 #schedule {
-    background-color: #ffc106;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .title {
-        font-size: 3rem;
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
-
-    section h1 {
-        font-size: 2rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-}
+    ba
