@@ -1,0 +1,114 @@
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(90deg, #ffc106, #d1004a);
+    --primary-color: #d1004a;
+    --secondary-color: #ffb950;
+    --accent-color: #f78d60;
+    --text-color: #ffffff;
+    --dark-text: #333;
+    --bg-light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--dark-text);
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    color: var(--text-color);
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    padding: 12px 24px;
+    background: var(--text-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    color: var(--dark-text);
+}
+
+.cta {
+    background: var(--primary-gradient);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--text-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta a:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+}
