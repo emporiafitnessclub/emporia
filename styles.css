@@ -1,6 +1,7 @@
 /* Importação de fonte Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
 
+/* Definição de variáveis de cor */
 :root {
     --primary-gradient: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente principal */
     --primary-color: #d1004a;  /* Rosa choque */
@@ -11,15 +12,7 @@
     --bg-light: #fff; /* Cor de fundo branca */
 }
 
-/* Garantir que o conteúdo ocupe toda a tela */
-html, body {
-    height: 100%; /* Faz o HTML e o BODY ocuparem toda a altura da tela */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Fundações globais */
+/* Definições gerais de estilo para todas as páginas */
 * {
     margin: 0;
     padding: 0;
@@ -72,6 +65,7 @@ footer {
     background-color: #222;
 }
 
+/* Garantir que o conteúdo ocupe toda a tela */
 html, body {
     height: 100%; /* Faz o HTML e o BODY ocuparem toda a altura da tela */
     margin: 0;
@@ -79,123 +73,57 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Garantir que o conteúdo dentro da landing page ocupe toda a altura da tela */
-.landing {
+/* Estilo para as páginas "Sobre Ti", "Vamos Conversar" e "Sobre Nós" */
+.sobre-nos-page,
+.sobre-ti-page,
+.vamos-conversar-page {
+    background-color: #ffb950; /* Cor de fundo amarela */
+    color: white;
+    padding: 40px;
+    text-align: left;
+    height: 100vh; /* Garante que ocupe toda a altura da página */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Faz o conteúdo ocupar 100% da altura da tela */
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente de fundo */
+}
+
+/* Página "Sobre Ti" */
+.sobre-ti-page {
+    background-color: #f78d60; /* Cor de fundo laranja claro */
+}
+
+/* Página "Vamos Conversar" */
+.vamos-conversar-page {
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
-    text-align: center;
+    padding: 40px;
+    text-align: left;
+    height: 100vh; /* Garante que ocupe toda a altura da página */
 }
 
-.landing h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-}
-
-.landing p {
-    font-size: 1.5rem;
-}
-
-.button-container {
-    margin-top: 30px;
-}
-
-.cta-button {
-    padding: 10px 30px;
+/* Botões */
+button, .cta-button, .whatsapp-button, .calendly-button {
+    padding: 10px 20px;
     background-color: white;
     color: #d1004a;
     border: 2px solid #d1004a;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
-    margin: 10px;
     text-decoration: none;
+    margin: 10px;
 }
 
-.cta-button:hover {
+button:hover, .cta-button:hover, .whatsapp-button:hover, .calendly-button:hover {
     background-color: #d1004a;
     color: white;
 }
 
-/* Estilos específicos para a página "Sobre Nós" */
-.sobre-nos-page {
-    background-color: #ffb950; /* Cor de fundo */
-    color: white; /* Texto em branco */
-    padding: 40px;
-    text-align: left;
-    min-height: 100vh; /* Preenche toda a altura da página */
-}
-
-/* Estilos específicos para a página "Sobre Ti" */
-.sobre-ti-page {
-    background-color: #f78d60; /* Cor de fundo laranja claro */
-    color: white; /* Texto em branco */
-    padding: 40px;
-    text-align: left;
-    min-height: 100vh; /* Preenche toda a altura da página */
-}
-
-/* Estilos específicos para a página "Vamos Conversar" */
-.vamos-conversar-page {
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
-    color: white;
-    padding: 40px;
-    text-align: left;
-    min-height: 100vh; /* Preenche toda a altura da página */
-}
-
-.vamos-conversar-page h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
-
-.vamos-conversar-page p {
-    font-size: 1rem;
-}
-
-/* Estilo para os planos */
-.plan {
-    background: none;
-    border: 2px solid #d1004a;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.plan h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.plan ul {
-    list-style-type: none;
-}
-
-.plan li {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-/* Modificando o comportamento dos links no topo */
-nav a.active {
-    background-color: #e69138;
-    color: white;
-}
-
-/* Para os planos, a borda estará visível em torno de cada plano, ajustando-se ao fundo da página */
-.plan {
-    border: 2px solid #d1004a;
-}
-
-/* Tipografia do menu superior e títulos */
-h1, h2, h3 {
+/* Estilo de título e texto */
+h1, h2, h3, p {
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
 }
 
 h1 {
@@ -210,39 +138,12 @@ h3 {
     font-size: 1.5rem;
 }
 
-p {
-    font-size: 1rem;
+/* Ajuste de espaçamento dos botões */
+.button-container {
+    margin-top: 30px;
 }
 
-/* Ajuste no botão de chamada */
-.cta-button {
-    padding: 10px 20px;
-    background-color: #d1004a;
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cta-button:hover {
-    background-color: #d1004a;
-}
-
-/* Botões no Index e outras páginas com cores consistentes */
-button {
-    padding: 10px 20px;
-    background-color: white;
-    color: #d1004a;
-    border: 2px solid #d1004a;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #d1004a;
-    color: white;
-}
-
+/* Para garantir que os botões na página de entrada sejam consistentemente brancos com letras rosa */
 .landing button {
     background-color: white;
     color: #d1004a;
@@ -250,21 +151,6 @@ button:hover {
 }
 
 .landing button:hover {
-    background-color: #d1004a;
-    color: white;
-}
-
-/* Estilo para os botões do WhatsApp e Calendly */
-.whatsapp-button, .calendly-button {
-    padding: 10px 20px;
-    background-color: white;
-    color: #d1004a;
-    border: 2px solid #d1004a;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.whatsapp-button:hover, .calendly-button:hover {
     background-color: #d1004a;
     color: white;
 }
