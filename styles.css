@@ -27,6 +27,10 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, p {
+    margin-bottom: 1rem;
+}
+
 /* Links no topo do menu */
 nav a {
     text-decoration: none;
@@ -73,10 +77,10 @@ html, body {
 .sobre-nos-page,
 .sobre-ti-page,
 .vamos-conversar-page {
-    background-color: var(--secondary-color); /* Cor de fundo amarela */
+    background-color: #ffb950; /* Cor de fundo amarela */
     color: white;
     padding: 40px;
-    text-align: center; /* Garantir que o texto fique centralizado */
+    text-align: left;
     height: 100vh; /* Garante que ocupe toda a altura da página */
     display: flex;
     flex-direction: column;
@@ -86,28 +90,24 @@ html, body {
 
 /* Página "Sobre Ti" */
 .sobre-ti-page {
-    background-color: var(--accent-color); /* Cor de fundo laranja claro */
+    background-color: #f78d60; /* Cor de fundo laranja claro */
 }
 
 /* Página "Vamos Conversar" */
 .vamos-conversar-page {
-    background: var(--primary-gradient); /* Gradiente de fundo */
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
     padding: 40px;
-    text-align: center; /* Garantir que o texto fique centralizado */
-    min-height: 100vh; /* Faz a página ocupar 100% da altura da tela */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
+    height: 100vh; /* Garante que ocupe toda a altura da página */
 }
 
 /* Botões */
 button, .cta-button, .whatsapp-button, .calendly-button {
     padding: 10px 20px;
     background-color: white;
-    color: var(--primary-color); /* Texto rosa choque */
-    border: 2px solid var(--primary-color); /* Borda rosa choque */
+    color: #d1004a;
+    border: 2px solid #d1004a;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
@@ -116,7 +116,7 @@ button, .cta-button, .whatsapp-button, .calendly-button {
 }
 
 button:hover, .cta-button:hover, .whatsapp-button:hover, .calendly-button:hover {
-    background-color: var(--primary-color); /* Fundo rosa choque */
+    background-color: #d1004a;
     color: white;
 }
 
@@ -146,11 +146,11 @@ h3 {
 /* Para garantir que os botões na página de entrada sejam consistentemente brancos com letras rosa */
 .landing button {
     background-color: white;
-    color: var(--primary-color); /* Texto rosa choque */
-    border: 2px solid var(--primary-color); /* Borda rosa choque */
+    color: #d1004a;
+    border: 2px solid #d1004a;
 }
 
 .landing button:hover {
-    background-color: var(--primary-color); /* Fundo rosa choque */
+    background-color: #d1004a;
     color: white;
 }
