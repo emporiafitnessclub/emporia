@@ -95,11 +95,15 @@ html, body {
 
 /* Página "Vamos Conversar" */
 .vamos-conversar-page {
-    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
+    background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente de fundo */
     color: white;
     padding: 40px;
     text-align: left;
-    height: 100vh; /* Garante que ocupe toda a altura da página */
+    min-height: 100vh; /* Faz a página ocupar 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Botões */
