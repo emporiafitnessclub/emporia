@@ -23,6 +23,8 @@ body {
     font-family: 'Raleway', sans-serif;
     color: white;
     line-height: 1.6;
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
 h1, h2, h3, p {
@@ -68,6 +70,7 @@ footer {
     text-align: center;
     padding: 100px 20px;
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente para a página de entrada */
+    min-height: 100vh; /* Preenche toda a altura da página */
 }
 
 .landing h1 {
@@ -100,18 +103,8 @@ footer {
     background-color: #ffb950; /* Cor de fundo */
     color: white; /* Texto em branco */
     padding: 40px;
-    border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Preenche a tela inteira */
-}
-
-.sobre-nos-page h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
-
-.sobre-nos-page p {
-    font-size: 1rem;
+    min-height: 100vh; /* Preenche toda a altura da página */
 }
 
 /* Estilos específicos para a página "Sobre Ti" */
@@ -119,36 +112,25 @@ footer {
     background-color: #f78d60; /* Cor de fundo */
     color: white; /* Texto em branco */
     padding: 40px;
-    border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Preenche a tela inteira */
-}
-
-.sobre-ti-page h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
-
-.sobre-ti-page p {
-    font-size: 1rem;
+    min-height: 100vh; /* Preenche toda a altura da página */
 }
 
 /* Estilos específicos para a página "Contactos" */
-.vamos-conversar-page {
+.contactos-page {
     background: linear-gradient(to bottom, #e69138, #d1004a); /* Gradiente igual à página inicial */
     color: white;
     padding: 40px;
-    border-radius: 15px;
     text-align: left;
-    min-height: 100vh; /* Preenche a tela inteira */
+    min-height: 100vh; /* Preenche toda a altura da página */
 }
 
-.vamos-conversar-page h1 {
+.contactos-page h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
 }
 
-.vamos.conversar-page p {
+.contactos-page p {
     font-size: 1rem;
 }
 
@@ -174,12 +156,6 @@ footer {
 .plan li {
     font-size: 1rem;
     margin: 5px 0;
-}
-
-/* Adicionando uma margem entre o título de navegação superior e o conteúdo */
-nav a {
-    margin-right: 40px;
-    margin-left: 40px;
 }
 
 /* Modificando o comportamento dos links no topo */
@@ -226,10 +202,24 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #d1004a;
+    background-color: #e69138;
 }
 
-/* Ajustes nos botões no index */
+/* Botões no Index e outras páginas com cores consistentes */
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #d1004a;
+    border: 2px solid #d1004a;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d1004a;
+    color: white;
+}
+
 .landing button {
     background-color: white;
     color: #d1004a;
@@ -237,6 +227,21 @@ p {
 }
 
 .landing button:hover {
+    background-color: #d1004a;
+    color: white;
+}
+
+/* Estilo para os botões do WhatsApp e Calendly */
+.whatsapp-button, .calendly-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #d1004a;
+    border: 2px solid #d1004a;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.whatsapp-button:hover, .calendly-button:hover {
     background-color: #d1004a;
     color: white;
 }
