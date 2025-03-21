@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emporia - Seguimos Juntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing">
+        <img src="logo.png" alt="Emporia Logo" class="logo">
+        <button onclick="navigateTo('home')">Seguimos Juntas</button>
+    </div>
+
+    <div id="home" class="hidden">
+        <nav>
+            <a href="#about">Sobre Nós</a>
+            <a href="#plans">Planos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+
+        <section id="about">
+            <h1>Sobre Nós</h1>
+            <p>Bem-vinda à Emporia, a sua nova comunidade de mulheres...</p>
+        </section>
+
+        <section id="plans">
+            <h1>Planos</h1>
+            <p>Escolha o plano de online coaching ideal para si!</p>
+            <a href="https://calendly.com/agenda-emporia" target="_blank">Agendar Chamada</a>
+        </section>
+
+        <section id="contact">
+            <h1>Contato</h1>
+            <p>Tem dúvidas? Fale conosco diretamente no WhatsApp!</p>
+            <a href="https://wa.me/seunumerodewhatsapp" target="_blank">Falar no WhatsApp</a>
+        </section>
+    </div>
+
+    <script>
+        function navigateTo(section) {
+            document.querySelector('.landing').style.display = 'none';
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
